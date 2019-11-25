@@ -1,0 +1,19 @@
+<view class="score">
+  <view class="score-text">我的评分</view>
+  <van-rate value="{{rate}}" bind:change="onChangeRate" />
+</view>
+<van-field
+    value="{{ content }}"
+    placeholder="写一些评论"
+    bind:change="onChangeContent"
+/>
+<view class="images">
+  <view class="image" wx:for="{{images}}" wx:key="{{key}}">
+    <icon type="clear" size="20" color="red" bindtap="deleteImg" data-item="{{item}}"></icon>
+    <image src="{{item}}"></image>
+  </view>
+  <view class="image" bindtap="upoadImg" wx:if="{{images.length !== 5}}">
+    <view class="add">+</view>
+  </view>
+</view>
+<van-button class="comment" type="warning" size="large" bindtap="submit">发布</van-button>

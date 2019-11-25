@@ -1,0 +1,20 @@
+<view wx:if="{{detail.title}}">
+  <view class="container" style="background: url({{detail.images.large}}) no-repeat top/cover">
+  </view>
+  <view class="mask"></view>
+  <view class="movie">
+    <image class="info-img" src="{{detail.images.small}}"></image>
+    <view class="info">
+      <view class="title">{{detail.title}}</view>
+      <view class="original_title">{{detail.original_title}}</view>
+      <view class="rate">{{detail.rating.average}}分</view>
+      <view class="pubdate">{{detail.pubdate}} 中国大陆上映</view>
+      <view class="directors">导演：<text wx:for="{{detail.directors}}" wx:key="{{key}}">{{item.name}} </text>
+      </view>
+    </view>
+  </view>
+  <view class="detail">
+    {{detail.summary}}
+  </view> 
+  <van-button class="comment" type="warning" size="large" bindtap="gotoComment">评论</van-button>
+</view>

@@ -1,0 +1,6 @@
+<view class="user-info">
+<open-data type="userAvatarUrl" class="avatar"></open-data>
+<view style="height: 20px;"></view>
+<open-data type="userNickName" class="name"></open-data>
+</view>
+
